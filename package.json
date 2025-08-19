@@ -1,6 +1,5 @@
 {
   "name": "furnix-backend",
-  "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc -p tsconfig.json",
@@ -23,7 +22,7 @@
     "socket.io": "^4.7.5",
     "twilio": "^5.8.0",
     "zod": "^3.23.8"
-    
+
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",

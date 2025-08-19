@@ -8,6 +8,7 @@ import { Server as SocketIOServer } from "socket.io"
 import path from "node:path"
 import { connectDB } from "./utils/db.js"
 import apiRouter from "./routes/index.js"
+import categoryRoutes from "./routes/category.js";
 
 dotenv.config()
 const app = express()
@@ -39,6 +40,8 @@ app.use(cookieParser())
 
 app.use("/uploads", express.static(path.join(process.cwd(), "public/uploads")))
 app.use("/api", apiRouter)
+app.use("/api/categories", categoryRoutes);
+
 io.on("connection", (socket) => {
   console.log("socket connected", socket.id)
   socket.on("disconnect", () => {})

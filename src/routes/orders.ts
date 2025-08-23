@@ -92,6 +92,25 @@ r.get("/distributors", async (req, res) => {
 })
 
 
+
+r.get("/mine", authMiddleware, async (req, res) => {
+  // console.log("Hit /api/orders/mine", req.user);
+
+  try {
+    const email = req.user?.email;
+    if (!email) return res.status(400).json({ error: "Email not found in token" });
+
+    const orders = await Order.find({ email }).sort({ createdAt: -1 }).lean();
+    res.json(orders);
+  } catch (err) {
+    console.error("Get my orders error:", err);
+    res.status(500).json({ error: "Failed to fetch my orders" });
+  }
+});
+
+
+
+
 // ASSIGN order to distributor
 r.patch("/:id/assign", async (req, res) => {
   const { id } = req.params
@@ -106,6 +125,8 @@ r.patch("/:id/assign", async (req, res) => {
     if (!distributor || distributor.role !== "DISTRIBUTOR") {
       return res.status(400).json({ error: "Invalid distributor" })
     }
+
+
 
     //  Find order
     const order = await Order.findById(id)

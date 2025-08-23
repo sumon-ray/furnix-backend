@@ -39,8 +39,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
 
 app.use("/uploads", express.static(path.join(process.cwd(), "public/uploads")))
-app.use("/api", apiRouter)
+app.use("/api", apiRouter);
 app.use("/api/categories", categoryRoutes);
+
 
 io.on("connection", (socket) => {
   console.log("socket connected", socket.id)

@@ -104,7 +104,7 @@ r.get("/", authMiddleware, async (req: any, res) => {
 
 // Optional: own orders (customer side) => query by email (বা auth হলে userId)
 // frontend থেকে email পাঠানোর দরকার নেই
-r.get("/mine", authMiddleware, async (req: any, res) => {
+r.get("/custom-mine", authMiddleware, async (req: any, res) => {
   const email = req.user?.email
   if (!email) return res.status(400).json({ error: "email not found in token" })
 

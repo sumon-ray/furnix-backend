@@ -1,0 +1,23 @@
+src\app 
+Folder PATH listing for volume New Volume
+Volume serial number is 86EB-AE03
+F:\MY-PROJECT-FOLDER\JOB-TASKS\FURNIX\BACKEND\SRC\APP
+Invalid path - \MY-PROJECT-FOLDER\JOB-TASKS\FURNIX\BACKEND\SRC\APP
+No subfolders exist 
+
+ 
+src\components 
+Folder PATH listing for volume New Volume
+Volume serial number is 86EB-AE03
+F:\MY-PROJECT-FOLDER\JOB-TASKS\FURNIX\BACKEND\SRC\COMPONENTS
+Invalid path - \MY-PROJECT-FOLDER\JOB-TASKS\FURNIX\BACKEND\SRC\COMPONENTS
+No subfolders exist 
+
+ 
+src\services 
+Folder PATH listing for volume New Volume
+Volume serial number is 86EB-AE03
+F:\MY-PROJECT-FOLDER\JOB-TASKS\FURNIX\BACKEND\SRC\SERVICES
+Invalid path - \MY-PROJECT-FOLDER\JOB-TASKS\FURNIX\BACKEND\SRC\SERVICES
+No subfolders exist 
+
